@@ -1,0 +1,29 @@
+{
+  "name": "listexpand",
+  "version": "1.0.0",
+  "description": "JS to handle lists of values (i.e. 1-5,10)",
+  "main": "public/listExpand.js",
+  "scripts": {
+    "test": " mocha-headless-chrome -f test/index.html",
+    "lint": "eslint **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsunbury/listExpand.git"
+  },
+  "author": "Rich Sunbury",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rsunbury/listExpand/issues"
+  },
+  "homepage": "https://github.com/rsunbury/listExpand#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "mocha": "^9.1.4",
+    "mocha-headless-chrome": "^3.1.0"
+  },
+  "dependencies": {}
+}
