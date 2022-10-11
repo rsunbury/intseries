@@ -1,6 +1,6 @@
 # intSeries
 
-JS (from typescript) code for handling a string of integer values (e.g. '1,3,5-10', 'ALL', 'NONE', '').
+Functions for handling a string of integer values (e.g. '1,3,5-10', 'ALL', 'NONE', '').
 
 ## Prerequisites
 * ES2016 or higher.
