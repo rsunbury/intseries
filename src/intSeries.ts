@@ -1,3 +1,7 @@
+/**
+ * @param intSeries { string } - A string with a series of values (e.g. '1,3,5-10', 'ALL', 'NONE', '').
+ * @throws Will throw an error if intSeries is an invalid format.
+ */
 function intSeriesTest(intSeries: string): void {
     const validCharacters = /^[0-9\-,]+$/;
     if (!validCharacters.test(intSeries)
@@ -8,6 +12,11 @@ function intSeriesTest(intSeries: string): void {
     }
 }
 
+/**
+ * @param intSeries { string } A string with a series of values (e.g. '1,3,5-10', 'ALL', 'NONE', '').
+ * @returns Set A set with the values in the string.
+ * @throws Will throw an error if intSeries is an invalid format.
+ */
 function intSeriesToSet(intSeries: string): Set<number>{
     intSeriesTest(intSeries);
     const valuesSet = new Set<number>();
@@ -29,6 +38,11 @@ function intSeriesToSet(intSeries: string): Set<number>{
     return valuesSet;
 }
 
+/**
+ * @param { Set<number> | Array<number>} intCollection  A set or array of integers.
+ * @returns { string }  string with a series of values (e.g. '1,3,5-10', 'ALL', 'NONE', '') representing the values in
+ * the collection.
+ */
 function intCollectionToString(intCollection: Set<number> | Array<number>): string {
     return [...intCollection]
         .sort((a, b) => a - b)
@@ -53,6 +67,14 @@ function intCollectionToString(intCollection: Set<number> | Array<number>): stri
         }, '');
 }
 
+/**
+ *
+ * @param {number} maxValue Largest possible value.
+ * @param { string } intSeries  A string with a series of values (e.g. '1,3,5-10', 'ALL', 'NONE', '').
+ * @param {number} value Value to remove from intSeries.
+ * @returns {string} New intSeries.
+ * @throws Will throw an error if intSeries is an invalid format.
+ */
 function intSeriesRemoveValue(maxValue: number, intSeries: string, value: number): string {
     let tempListString = intSeries ?? 'NONE';
     intSeriesTest(tempListString);
@@ -63,6 +85,13 @@ function intSeriesRemoveValue(maxValue: number, intSeries: string, value: number
     return intCollectionToString(tempSet);
 }
 
+/**
+ *
+ * @param { string } intSeries  A string with a series of values (e.g. '1,3,5-10', 'ALL', 'NONE', '').
+ * @param {number} value Value to add to intSeries.
+ * @returns {string} New intSeries.
+ * @throws Will throw an error if intSeries is an invalid format.
+ */
 function intSeriesAddValue(intSeries: string, value: number): string {
     intSeriesTest(intSeries);
     if (intSeries.toUpperCase() === 'ALL') return (intSeries);
@@ -71,6 +100,13 @@ function intSeriesAddValue(intSeries: string, value: number): string {
     return intCollectionToString(tempSet);
 }
 
+/**
+ *
+ * @param { string } intSeries1 A string with a series of values (e.g. '1,3,5-10', 'ALL', 'NONE', '').
+ * @param { string } intSeries2 A string with a series of values (e.g. '1,3,5-10', 'ALL', 'NONE', '').
+ * @returns {boolean} A boolean that reflects if any values of intSeries1 are in intSeries2.
+ * @throws Will throw an error if intSeries1 or intSeries2 is an invalid format.
+ */
 function intSeriesOverlap(intSeries1: string, intSeries2: string): boolean {
     intSeriesTest(intSeries1);
     intSeriesTest(intSeries2);
@@ -87,6 +123,13 @@ function intSeriesOverlap(intSeries1: string, intSeries2: string): boolean {
     return list1Array.some((element) => list2Set.has(element));
 }
 
+/**
+ *
+ * @param { string } intSeries A string with a series of values (e.g. '1,3,5-10', 'ALL', 'NONE', '').
+ * @param {number} value Value to search for in intSeries.
+ * @returns {boolean} Result of searching for value in intSeries.
+ * @throws Will throw an error if intSeries is an invalid format.
+ */
 function intSeriesHas(intSeries: string, value: number): boolean {
     intSeriesTest(intSeries);
 
