@@ -4,7 +4,7 @@ function intSeriesTest(intSeries: string): void {
         && intSeries.toUpperCase() !== 'NONE'
         && intSeries.toUpperCase() !== ''
         && intSeries.toUpperCase() !== 'ALL') {
-        throw `Invalid list ${intSeries}`;
+        throw `Invalid intSeries ${intSeries}`;
     }
 }
 
