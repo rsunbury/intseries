@@ -2,3 +2,4 @@
 .eslintignore
 .eslintrc.js
 tsconfig.json
+/src/test/
