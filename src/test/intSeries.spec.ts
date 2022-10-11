@@ -101,8 +101,8 @@ describe('intSeries functions', () => {
         });
         it('should return error if bad range', () => {
             expect(() => {
-                intSeriesHas('9-7', 9);
-            }).to.throw('Invalid range 9-7');
+                intSeriesToSet('9-7');
+            }).to.throw('Bad range 9-7');
         });
     });
     describe('intSeriesCollectionToString', () => {
