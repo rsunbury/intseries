@@ -5,7 +5,7 @@
   "main": "./dist/intSeries.js",
   "types": "./dist/intSeries.d.ts",
   "scripts": {
-    "test": " mocha-headless-chrome -f test/index.html",
+    "test": "mocha --require ts-node/register src/test/**/*.spec.ts",
     "lint": "eslint **/*.js"
   },
   "repository": {
