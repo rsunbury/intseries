@@ -1,22 +1,22 @@
 {
-  "name": "listexpand",
+  "name": "intseries",
   "version": "1.0.0",
-  "description": "JS to handle lists of values (i.e. 1-5,10)",
-  "main": "public/listExpand.js",
+  "description": "Handles a string with a series of int values (i.e. '1,3,5-20,30').",
+  "main": "dist/intSeries.js",
   "scripts": {
     "test": " mocha-headless-chrome -f test/index.html",
     "lint": "eslint **/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rsunbury/listExpand.git"
+    "url": "git+https://github.com/rsunbury/listExpand.intSeries"
   },
   "author": "Rich Sunbury",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rsunbury/listExpand/issues"
+    "url": "https://github.com/rsunbury/intSeries/issues"
   },
-  "homepage": "https://github.com/rsunbury/listExpand#readme",
+  "homepage": "https://github.com/rsunbury/intSeries#readme",
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^9.1.4",
