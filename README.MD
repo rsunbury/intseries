@@ -11,7 +11,7 @@ Functions for handling a string of integer values (e.g. '1,3,5-10', 'ALL', 'NONE
 Use the package manager npm to install intSeries.
 
 ```bash
-npm install rsunbury/intSeries
+npm install @rsunbury/intSeries
 ```
 
 ## Glossary
