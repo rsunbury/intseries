@@ -11,9 +11,9 @@ import {
          intSeriesOverlap
 } from '../intSeries';
 
-describe('listFind functions', () => {
-    describe('listFind', () => {
-        describe('list === "ALL"', () => {
+describe('intSeries functions', () => {
+    describe('intSeries', () => {
+        describe('intSeries === "ALL"', () => {
             it('should return true regardless of number', () => {
                 expect(intSeriesHas('ALL', Math.floor(Math.random() * 9999))).to.be.true;
             });
