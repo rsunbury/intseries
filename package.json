@@ -1,5 +1,5 @@
 {
-  "name": "intseries",
+  "name": "@rsunbury/intseries",
   "version": "1.0.0",
   "description": "Handles a string with a series of int values (i.e. '1,3,5-20,30').",
   "main": "./dist/intSeries.js",
