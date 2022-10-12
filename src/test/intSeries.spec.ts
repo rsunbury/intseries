@@ -123,6 +123,7 @@ describe('intSeries functions', () => {
             expect(intSeriesRemoveValue(9999, testList, 60)).to.equal('0-20');
             expect(intSeriesRemoveValue(9999, 'NONE', 60)).to.equal('NONE');
             expect(intSeriesRemoveValue(9999, 'ALL', 60)).to.equal('0-59,61-9999');
+            expect(intSeriesRemoveValue(9999, '', 60)).to.equal('');
         });
     });
     describe('intSeriesAddValue', () => {

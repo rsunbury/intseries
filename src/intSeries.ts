@@ -76,11 +76,10 @@ function intCollectionToString(intCollection: Set<number> | Array<number>): stri
  * @throws Will throw an error if intSeries is an invalid format.
  */
 function intSeriesRemoveValue(maxValue: number, intSeries: string, value: number): string {
-    let tempListString = intSeries ?? 'NONE';
-    intSeriesTest(tempListString);
-    if (tempListString.toUpperCase() === 'NONE') return (tempListString);
-    if (tempListString.toUpperCase() === 'ALL') tempListString = `0-${maxValue}`;
-    const tempSet = intSeriesToSet(tempListString);
+    intSeriesTest(intSeries);
+    if (intSeries.toUpperCase() === 'NONE' || '') return (intSeries);
+    if (intSeries.toUpperCase() === 'ALL') intSeries = `0-${maxValue}`;
+    const tempSet = intSeriesToSet(intSeries);
     tempSet.delete(value);
     return intCollectionToString(tempSet);
 }
