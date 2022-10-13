@@ -60,6 +60,18 @@ describe('intSeries functions', () => {
                 expect(() => {
                     intSeriesTest(' ');
                 }).to.throw('Invalid intSeries  ');
+                expect(() => {
+                    intSeriesTest('-1-20');
+                }).to.throw('Invalid intSeries -1-20');
+                expect(() => {
+                    intSeriesTest(',1-20');
+                }).to.throw('Invalid intSeries ,1-20');
+                expect(() => {
+                    intSeriesTest('1-20-');
+                }).to.throw('Invalid intSeries 1-20-');
+                expect(() => {
+                    intSeriesTest('1-20,');
+                }).to.throw('Invalid intSeries 1-20,');
             });
         });
         describe('Valid intSeries', () => {

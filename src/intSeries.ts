@@ -3,7 +3,7 @@
  * @throws Will throw an error if intSeries is an invalid format.
  */
 function intSeriesTest(intSeries: string): void {
-    const validCharacters = /^[0-9\-,]+$/;
+    const validCharacters = /^\d([0-9\-,]*\d)?$/;
     if (!validCharacters.test(intSeries)
         && intSeries.toUpperCase() !== 'NONE'
         && intSeries.toUpperCase() !== ''
