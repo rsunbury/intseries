@@ -114,6 +114,10 @@ describe('intSeries functions', () => {
         it('should return the correct string representation of an Array', () => {
             expect(intCollectionToString(testArray)).to.equal('0-4,50,52');
         });
+        it('should return the correct string representation of an Array in the correct order', () => {
+            const outOfOrder = [0, 1, 2, 3, 4, 52, 50];
+            expect(intCollectionToString(outOfOrder)).to.equal('0-4,50,52');
+        });
     });
     describe('intSeriesRemoveValue', () => {
         const testList = '0-20,60';
