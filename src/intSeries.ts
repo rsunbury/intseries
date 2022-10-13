@@ -8,7 +8,7 @@ function intSeriesTest(intSeries: string): void {
         && intSeries.toUpperCase() !== 'NONE'
         && intSeries.toUpperCase() !== ''
         && intSeries.toUpperCase() !== 'ALL') {
-        throw `Invalid intSeries ${intSeries}`;
+        throw new Error(`Invalid intSeries ${intSeries}`);
     }
 }
 
@@ -28,7 +28,7 @@ function intSeriesToSet(intSeries: string): Set<number>{
             valuesSet.add(+e);
         } else {
             if (+items[0] > +items[1]) {
-                throw `Bad range ${items[0]}-${items[1]}`;
+                throw new Error(`Bad range ${items[0]}-${items[1]}`);
             }
             for (let i = +items[0]; i <= +items[1]; i++) {
                 valuesSet.add(+i);
@@ -144,7 +144,7 @@ function intSeriesHas(intSeries: string, value: number): boolean {
             values.push(values[0]);
         }
         if (+values[1] < +values[0]) {
-            throw `Invalid range ${element}`;
+            throw new Error(`Invalid range ${element}`);
         }
         return (+value >= +values[0] && +value <= +values[1]);
     });
